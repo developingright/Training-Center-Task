@@ -4,7 +4,7 @@ import * as styles from '../styles/navbar.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <input type="checkbox" id= "check"className={styles.check}/>
@@ -20,3 +20,5 @@ export default function Navbar() {
     </nav>
   )
 }
+
+export default Navbar
