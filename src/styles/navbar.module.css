@@ -1,0 +1,28 @@
+
+.navbar{
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+.nav_ul{
+    float: right;
+    margin-right: 20px;
+}
+.nav_li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+.nav_links{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
