@@ -12,9 +12,9 @@ module.exports = fs.readFileSync(require.resolve('../data/training-modules.yaml'
 //using js-yaml for converting yaml into json format for parsing
 const data = YAML.load(raw);
 
-export default function YamlContent() {
-  return (
-   <>
+const YamlContent = () => {
+  return(
+    <>
     <div className={styles.container}>
       <div className={styles.flex_row}>
         <div className={styles.flex_col}>
@@ -30,8 +30,11 @@ export default function YamlContent() {
       </div>
     </div>
    </>
-  );
+  )
 }
+
+export default YamlContent
+
 
  // <div>
     //   {/* displaying the details of first module in input yaml file  */}
