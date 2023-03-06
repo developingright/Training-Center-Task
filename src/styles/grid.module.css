@@ -29,12 +29,14 @@
   line-height: 30px;
   padding: 0 10px;
   text-align: center;
+  display: inline-flex;
 }
 .link {
   font-weight: 500;
   line-height: 30px;
   padding: 0 10px;
   text-align: center;
+  display: inline-flex;
 }
 .inline {
   display: inline-flex;
