@@ -1,11 +1,13 @@
 import * as React from "react"
-
+import Navbar from "../Components/Navbar"
+import '../styles/main.css'
 
 const IndexPage = () => {
   return (
-    <>
-      <h1>Hello world!</h1>
-    </>
+    <main>
+      {/* Navbar Component */}
+      <Navbar/>
+    </main>
   )
 }
 
