@@ -1,5 +1,6 @@
 import * as React from "react"
 import Navbar from "../Components/Navbar"
+import YamlContent from "../Components/YamlContent"
 import '../styles/main.css'
 
 const IndexPage = () => {
@@ -7,6 +8,8 @@ const IndexPage = () => {
     <main>
       {/* Navbar Component */}
       <Navbar/>
+      {/* Yaml Content Component */}
+      <YamlContent/>
     </main>
   )
 }
