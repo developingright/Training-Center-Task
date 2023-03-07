@@ -6,10 +6,13 @@ import '../styles/main.css'
 const IndexPage = () => {
   return (
     <main>
+      
       {/* Navbar Component */}
       <Navbar/>
+      
       {/* Yaml Content Component */}
       <YamlContent/>
+
     </main>
   )
 }
