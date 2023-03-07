@@ -23,10 +23,10 @@ const Module = (props) => {
                 <img className={styles.img} src="http://via.placeholder.com/80x80" alt="" />
                 <div className={`${styles.title} ${color}`}><ReactMarkdown children={props.title} rehypePlugins={[rehypeRaw]}/></div>
             </div>
-            <div className={styles.desc}>Description: <ReactMarkdown children={props.desc} rehypePlugins={[rehypeRaw]}/></div>
-            <div className={styles.link}>Repo: <a href={props.repo}>{props.repo}</a></div>
-            <div className={styles.link}>Webpage: <a href={props.webpage}>{props.webpage}</a></div>
-            <div className={styles.link}>Video: <a href={props.video}>{props.video}</a></div>
+            <div className={styles.desc}>Description: <ReactMarkdown children={props.desc==='' ? "NA" : props.desc} rehypePlugins={[rehypeRaw]}/></div>
+            <div className={styles.link}>Repo: <a href={props.repo}>{props.repo==='' ? "NA" : props.repo}</a></div>
+            <div className={styles.link}>Webpage: <a href={props.webpage}>{props.webpage==='' ? "NA" : props.webpage}</a></div>
+            <div className={styles.link}>Video: <a href={props.video}>{props.video==='' ? "NA" : props.video}</a></div>
         </div>
     )
 }
