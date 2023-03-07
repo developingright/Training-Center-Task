@@ -18,6 +18,15 @@
   overflow-wrap: break-word;
   border-radius: 0.25em;
 }
+.red {
+  color: #e74c3c;
+}
+.yellow {
+  color: #f39c12;
+}
+.green {
+  color: #2ecc71;
+}
 .title {
   padding-top: 10px;
   font-size: 40px;

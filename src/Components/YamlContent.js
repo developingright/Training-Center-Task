@@ -111,6 +111,7 @@ const YamlContent = () => {
               webpage = {module.webpage}
               video = {module.videos}
               key = {module.name}
+              status = {module.status}
             />
             )
           }
