@@ -1,0 +1,16 @@
+- name_list: []
+  curricula: 'All'
+- name_list: ['The UNIX Shell','Version controlling with git','Programming with python','SSH','Machine learning','Matplotlib for HEP','<code>ROOT</code>']
+  curricula: 'Basics'
+- name_list: ['Version controlling with git','Advanced git','CI/CD (gitlab)','CI/CD (github)','Docker','Singularity','Unit testing','Level up your python']
+  curricula: 'Software Development and Deployment'
+- name_list: ['HEP C++ Course','Build systems:  <code>cmake</code>']
+  curricula: 'C++ corner'
+- name_list: ['Machine learning','Machine learning on GPU']
+  curricula: 'Machine learning and other analysis tools'
+- name_list: ['Scikit-HEP','<code>ROOT</code>','<code>UnROOT</code>']
+  curricula: 'HEP specific tools'
+- name_list : ['A simple analysis']
+  curricula: 'Miscellaneous'
+- name_list: ['<code>UnROOT</code>','Distributed file systems and grid computing','Parallel programming','alpaka','Workflows &amp; reproducibility','Documentation','Event generation and MC']
+  curricula: 'Planned, in early development, or archived'

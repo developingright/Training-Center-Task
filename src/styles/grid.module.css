@@ -54,6 +54,15 @@
 .img {
   padding: 10px;
 }
+.curriculum{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.curriculum h4{
+  font-size: 20px;
+  margin-right: 10px;
+}
 @media (max-width: 1024px) {
   .flex_col {
     min-width: 70%;
