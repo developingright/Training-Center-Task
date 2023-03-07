@@ -1,0 +1,19 @@
+.filter{
+    text-align: center;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+}
+.filter h3{
+    font-size:25px;
+    display: inline-block;
+    margin: 0 10px;
+}
+.filter h4{
+    display: inline-block;
+    margin: 0 10px;
+}
+.filter select{
+    display: inline-block;
+    position:relative;
+}

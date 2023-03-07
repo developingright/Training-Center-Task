@@ -10,10 +10,10 @@ const Module = (props) => {
                 <img className={styles.img} src="http://via.placeholder.com/80x80" alt="" />
                 <div className={styles.title}><ReactMarkdown children={props.title} rehypePlugins={[rehypeRaw]}/></div>
             </div>
-            <p className={styles.desc}>Description: <ReactMarkdown children={props.desc} rehypePlugins={[rehypeRaw]}/></p>
-            <p className={styles.link}>Repo: <a href={props.repo}>{props.repo}</a></p>
-            <p className={styles.link}>Webpage: <a href={props.webpage}>{props.webpage}</a></p>
-            <p className={styles.link}>Video: <a href={props.video}>{props.video}</a></p>
+            <div className={styles.desc}>Description: <ReactMarkdown children={props.desc} rehypePlugins={[rehypeRaw]}/></div>
+            <div className={styles.link}>Repo: <a href={props.repo}>{props.repo}</a></div>
+            <div className={styles.link}>Webpage: <a href={props.webpage}>{props.webpage}</a></div>
+            <div className={styles.link}>Video: <a href={props.video}>{props.video}</a></div>
         </div>
     )
 }
