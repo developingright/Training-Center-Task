@@ -13,6 +13,7 @@
 .nav_ul {
   float: right;
   margin-right: 20px;
+  z-index: 3;
 }
 .nav_li {
   display: inline-block;
@@ -58,6 +59,7 @@
     left: -100%;
     text-align: center;
     transition: all 0.3s;
+    background-color: rgb(255, 255, 255);
   }
   .nav_li {
     display: block;
