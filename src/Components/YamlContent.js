@@ -15,6 +15,10 @@ module.exports = fs.readFileSync(require.resolve('../data/training-modules.yaml'
 //using js-yaml for converting yaml into json format for parsing
 const module_data = YAML.load(raw);
 
+const raw_curricula = preval`const fs = require('fs');
+module.exports = fs.readFileSync(require.resolve('../data/curriculum.yaml'), 'utf8');`;
+
+const curricula_data = YAML.load(raw_curricula);
 
 const Status = (props) => {
   const onSelectValueChanged = (event) =>{
@@ -33,6 +37,19 @@ const Status = (props) => {
   )
 }
 
+const Curriculum = (props) => {
+  const onCurriculaValueChanged = (event) =>{
+    props.curriculaValueSelected(event.target.value);
+  }
+  return(
+    <div className={styles.curriculum}>
+      <h4>Curriculum: </h4>
+      <select className={filterstyle.dropdown} id="dropdown" onChange={onCurriculaValueChanged} defaultValue="none">
+        {props.curriculum.map( obj => <option value={obj.curricula} >{obj.curricula}</option> )};
+      </select>
+    </div>
+  )
+}
 
 const Video = (props) => {
   const onCheckValueChanged = () =>{
@@ -62,10 +79,26 @@ const YamlContent = () => {
   
   let [selectTextValue, updateSelectText] = useState('none');
   let [checkValue, updateCheckValue] = useState(false);
-
-  //filtering the module_data list based on the status attribute and output - selectFilteredList
+  let [curriculaValue, updateCurriculaValue] = useState('All');
   
-  let selectFilteredList = module_data.filter((obj) => {
+  //Categorising the modules based on their curricula and output - selectedCurriculaList
+
+  let selectedCurriculaList = [];
+  if (curriculaValue ==='All' ){
+    selectedCurriculaList = module_data;
+  }
+  else{
+    let curricula_list = curricula_data.filter((obj)=> obj.curricula === curriculaValue);
+    let test = curricula_list[0].name_list;
+    for(let i = 0 ; i < test.length ; i++)
+      selectedCurriculaList.push(...module_data.filter((obj)=> obj.name === test[i]))
+    }
+  
+  
+  
+  //filtering the selectedCurriculaList list based on the status attribute and output - selectFilteredList
+  
+  let selectFilteredList = selectedCurriculaList.filter((obj) => {
     if(selectTextValue === "none"){
       return obj;
     }
@@ -92,13 +125,19 @@ const YamlContent = () => {
   const onSelectValueSelected = (filterValue) => {
     updateSelectText(filterValue);
   }
+  const onCurriculaValueSelected = (curriculaValue) =>{
+    updateCurriculaValue(curriculaValue);
+  }
+
   
   return(
     <>
       <div className={styles.container}>
 
+      <Curriculum curriculum = {curricula_data} curriculaValueSelected={onCurriculaValueSelected} />
+
         {/* Filter options for training module */}
-        <Filters filterValueSelected = {onSelectValueSelected} checkValueSelected = {onCheckValueSelected}/>
+        <Filters filterValueSelected = {onSelectValueSelected} checkValueSelected = {onCheckValueSelected} />
 
         <div className={styles.flex_row}>
 
