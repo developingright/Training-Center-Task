@@ -13,6 +13,8 @@
 .nav_ul {
   float: right;
   margin-right: 20px;
+  background-color: rgb(255, 255, 255);
+  z-index: 3;
 }
 .nav_li {
   display: inline-block;
