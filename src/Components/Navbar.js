@@ -11,10 +11,10 @@ const Navbar = () => {
       <label htmlFor="check">
         <FontAwesomeIcon icon={faBars} className={styles.icon}/>
       </label>
-      <label className={styles.logo}>Training Center</label>
+      <Link to='/' className={styles.logo}>Training Center</Link>
       <ul className={styles.nav_ul}>
         <li className={styles.nav_li}>
-          <Link to='/' className={styles.nav_links}>About</Link>
+          <Link to='/About' className={styles.nav_links}>About</Link>
         </li>
       </ul>
     </nav>

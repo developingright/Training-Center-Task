@@ -1,19 +1,16 @@
 import * as React from "react"
-import Navbar from "../Components/Navbar"
+import Layout from "../Components/Layout"
 import YamlContent from "../Components/YamlContent"
 import '../styles/main.css'
 
 const IndexPage = () => {
   return (
-    <main>
-      
-      {/* Navbar Component */}
-      <Navbar/>
-      
-      {/* Yaml Content Component */}
-      <YamlContent/>
+      <Layout>
 
-    </main>
+        {/* Yaml Content Component */}
+          <YamlContent/>
+
+      </Layout>
   )
 }
 
